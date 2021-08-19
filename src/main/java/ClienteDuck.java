@@ -4,10 +4,12 @@ public class ClienteDuck {
         mallardDuck.quack();
         mallardDuck.swim();
         mallardDuck.display();
+        mallardDuck.fly();
 
         RedheadDuck redheadDuck = new RedheadDuck();
         redheadDuck.quack();
         redheadDuck.swim();
         redheadDuck.display();
+        redheadDuck.fly();
     }
 }
