@@ -1,8 +1,8 @@
 public class RubberDuck extends Duck {
 
-    @Override
-    public void quack() {
-        System.out.println("Sonido squeak");
+    public RubberDuck() {
+        quackBehavior = new Squeak();
+        flyBehavior = new FlyNoWay();
     }
 
     @Override
@@ -10,8 +10,4 @@ public class RubberDuck extends Duck {
         System.out.println("Visualizar RubberDuck");
     }
 
-    @Override
-    public void fly() {
-        throw new UnsupportedOperationException();
-    }
 }

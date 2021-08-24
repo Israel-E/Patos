@@ -1,7 +1,7 @@
 public abstract class Duck {
-    public void quack() {
-        System.out.println("Sonido quack");
-    }
+
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
 
     public void swim() {
         System.out.println("Acción Nadar");
@@ -9,7 +9,19 @@ public abstract class Duck {
 
     abstract void display();
 
-    public void fly() {
-        System.out.println("Acción Volar");
+    public void performFly() {
+        flyBehavior.fly();
+    }
+
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
     }
 }
